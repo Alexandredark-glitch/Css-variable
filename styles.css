@@ -1,0 +1,80 @@
+:root {
+  --base: rgb(255, 198, 0);
+  --spacing: 2rem;
+  --blur: 0px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: #193549;
+  color: white;
+  font-family: "helvetica neue", sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+}
+h2 {
+  font-size: 3rem;
+}
+
+input {
+  display: inline-block;
+  width: 20rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+img {
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+  height: auto;
+  background-color: var(--base);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  padding: var(--spacing);
+  filter: blur(var(--blur));
+}
+.hl {
+  color: var(--base);
+}
+
+.my-footer {
+  margin-top: 2.5rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #000000;
+  color: #ffffff;
+}
+.my-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.my-footer .bold-link {
+  font-weight: 800;
+}
+
+@media (max-width: 520px) {
+  input {
+    display: inline-block;
+    width: 10rem;
+  }
+  .controls {
+    font-size: 1.5rem;
+  }
+  img {
+    padding: 2rem;
+  }
+}
